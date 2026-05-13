@@ -6,6 +6,6 @@ Just run:
 git clone https://github.com/SebastianYousef/computer_init.git
 
 Then run 
-sh {The file you wish to run}
+bash {The file you wish to run}
 
 Enjoy!
