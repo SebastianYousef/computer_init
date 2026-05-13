@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # =============================================================================
-#  install-vscode-macos.sh — Install VSCode on macOS without admin
-#  Run with: bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_REPO/main/install-vscode-macos.sh)
+#  vscode_macos.sh — Install VSCode on macOS without admin
 # =============================================================================
 
 set -euo pipefail
@@ -73,10 +72,10 @@ if ! $SKIP_DOWNLOAD; then
 
     ARCH=$(uname -m)
     if [[ "$ARCH" == "arm64" ]]; then
-        DOWNLOAD_URL="https://code.visualstudio.com/sha/download?build=stable&os=darwin-arm64"
+        DOWNLOAD_URL="https://update.code.visualstudio.com/latest/darwin-arm64/stable"
         info "Architecture: Apple Silicon (arm64)"
     else
-        DOWNLOAD_URL="https://code.visualstudio.com/sha/download?build=stable&os=darwin"
+        DOWNLOAD_URL="https://update.code.visualstudio.com/latest/darwin/stable"
         info "Architecture: Intel (x86_64)"
     fi
 

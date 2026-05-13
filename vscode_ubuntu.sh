@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # =============================================================================
-#  install-vscode-ubuntu.sh — Install VSCode on Ubuntu without admin
+#  vscode_ubuntu.sh — Install VSCode on Ubuntu without admin
 #  Uses VSCode's official portable mode (no apt, no sudo)
-#  Run with: bash <(curl -fsSL https://raw.githubusercontent.com/YOUR_REPO/main/install-vscode-ubuntu.sh)
 # =============================================================================
 
 set -euo pipefail
@@ -81,7 +80,7 @@ if ! $SKIP_DOWNLOAD; then
     step "Downloading VSCode portable ($OS_TYPE)..."
     info "This may take a moment (~100MB)..."
 
-    DOWNLOAD_URL="https://code.visualstudio.com/sha/download?build=stable&os=$OS_TYPE"
+    DOWNLOAD_URL="https://update.code.visualstudio.com/latest/${OS_TYPE}/stable"
     TMP_DIR=$(mktemp -d)
     TMP_TAR="$TMP_DIR/vscode.tar.gz"
 
